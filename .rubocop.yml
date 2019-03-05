@@ -1,0 +1,75 @@
+require: rubocop-rspec
+
+AllCops:
+  TargetRailsVersion: 5.1
+  TargetRubyVersion: 2.5
+  Exclude:
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - '.git/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'components/event_stream/**/*'
+
+Documentation:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 120
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    default: '()'
+    '%i': '[]'
+    '%I': '[]'
+    '%r': '{}'
+    '%w': '[]'
+    '%W': '[]'
+
+Metrics/BlockLength:
+  Exclude:
+    - config/routes.rb
+    - config/initializers/*.rb
+    - spec/**/*
+    - Guardfile
+    - config/routes.rb
+
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/*.rb
+    - db/seeds.rb
+
+Layout/AlignHash:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: true
+
+Style/CommentedKeyword:
+  Enabled: false
+
+Rails/FilePath:
+  EnforcedStyle: slashes
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/requests/**/*'
+    - 'spec/integration/**/*'
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 20
+
+RSpec/EmptyExampleGroup:
+  Exclude:
+    - 'spec/integration/**/*'
+
+RSpec/NestedGroups:
+  Max: 5

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+
+bundle exec rubocop --parallel
+bundle exec brakeman --no-pager
+bundle exec rake spec
+bundle exec bundle-audit --update
