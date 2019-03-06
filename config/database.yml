@@ -3,9 +3,9 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   host: <%= ENV['BACKEND_DB_HOST'] %>
-  database: <%= ENV['BACKEND_DB_NAME'] %>
-  password: <%= ENV['BACKEND_DB_PASSWORD'] %>
-  username: <%= ENV['BACKEND_DB_USER'] %>
+  database: joko
+  password:
+  username: joko
   port: <%= ENV['BACKEND_DB_PORT'] %>
 
 development:
